@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "firebase": "^11.10.0",
+    "react-bootstrap": "^2.10.10",
     "react-router-dom": "^7.6.3"
   }
 }

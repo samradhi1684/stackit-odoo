@@ -1,26 +1,21 @@
-// App.jsx
-import { useEffect } from "react";
-import { addQuestion } from "./api/questionapi";
-
+// src/App.jsx
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import AskQuestion from "./pages/AskQuestion"; // friend a component
+import QuestionDetail from "./pages/QuestionDetail"; //friend b component
 
 function App() {
-  useEffect(() => {
-    const dummy = {
-      title: "How to center a div in CSS?",
-      description: "<p>I tried margin auto but it’s not working.</p>",
-      tags: ["css", "frontend"],
-      createdAt: new Date(),
-      author: { name: "Demo User", uid: "123" },
-      answers: []
-    };
-    addQuestion(dummy);
-  }, []);
-
   return (
-    <div>
-      <h1>Hello StackIt</h1>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ask" element={<AskQuestion />} />
+        <Route path="/question/:id" element={<QuestionDetail />} />
+      </Routes>
+    </>
   );
 }
 
-export default App; // <-- This line is required
+export default App;
