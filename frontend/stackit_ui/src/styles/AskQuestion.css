@@ -61,20 +61,32 @@
   }
   
   .similar-box {
-    background-color: #292929;
-    padding: 1rem;
-    margin-top: 10px;
-    border-radius: 8px;
-    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 12px;
+    background-color: #f9f9ff;
+    margin-top: 20px;
+    border-radius: 6px;
   }
   
-  .similar-box ul {
-    list-style: disc;
-    padding-left: 1.2rem;
+  .similar-box h5 {
+    color: #090909;
+    font-weight: 600;
+    margin-bottom: 10px;
   }
   
-  .similar-box a {
-    color: #5ddcff;
-    text-decoration: none;
+  .similar-list {
+    list-style: none;
+    padding-left: 0;
   }
+  
+  .similar-list li {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .similar-desc {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
   
