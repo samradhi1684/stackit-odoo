@@ -1,0 +1,80 @@
+.ask-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    color: #080808;
+    border-radius: 17px;
+    font-family: sans-serif;
+    border-color: #080808;
+    border-width: 20px;
+  }
+  
+  .ask-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #2a2a2a;
+    color: rgb(251, 240, 240);
+  }
+  
+  .toolbar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .toolbar button {
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toolbar button:hover {
+    background-color: #444;
+  }
+  
+  .editor {
+    min-height: 180px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    padding: 10px;
+    background: white;
+    color: black;
+    overflow-y: auto;
+  }
+  
+  .similar-box {
+    background-color: #292929;
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: #ccc;
+  }
+  
+  .similar-box ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+  }
+  
+  .similar-box a {
+    color: #5ddcff;
+    text-decoration: none;
+  }
+  

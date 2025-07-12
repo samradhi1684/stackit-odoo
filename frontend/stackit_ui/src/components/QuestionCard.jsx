@@ -1,5 +1,7 @@
+// src/components/QuestionCard.jsx
 import { useRole } from "../context/RoleContext";
 import { useNavigate } from "react-router-dom";
+import { deleteQuestion } from "../api/questionapi";
 
 const QuestionCard = ({ question }) => {
   const { role } = useRole();
@@ -7,6 +9,15 @@ const QuestionCard = ({ question }) => {
 
   const handleClick = () => {
     navigate(`/question/${question.id}`);
+  };
+
+  const handleDelete = async (e) => {
+    e.stopPropagation();
+    const confirm = window.confirm("Are you sure you want to delete this question?");
+    if (confirm) {
+      await deleteQuestion(question.id);
+      alert("Question deleted (refresh to see changes).");
+    }
   };
 
   return (
@@ -27,11 +38,11 @@ const QuestionCard = ({ question }) => {
       </p>
 
       {role !== "guest" && (
-        <div>
+        <div className="d-flex gap-2">
           <button
-            className="btn btn-outline-primary btn-sm me-2"
+            className="btn btn-outline-primary btn-sm"
             onClick={(e) => {
-              e.stopPropagation(); // prevent navigating to detail page
+              e.stopPropagation();
               alert("Answer logic coming soon...");
             }}
           >
@@ -40,13 +51,22 @@ const QuestionCard = ({ question }) => {
           <button
             className="btn btn-outline-success btn-sm"
             onClick={(e) => {
-              e.stopPropagation(); // prevent navigating to detail page
+              e.stopPropagation();
               alert("Upvote logic coming soon...");
             }}
           >
             Upvote
           </button>
         </div>
+      )}
+
+      {role === "admin" && (
+        <button
+          className="btn btn-outline-danger btn-sm mt-2"
+          onClick={handleDelete}
+        >
+          Delete
+        </button>
       )}
     </div>
   );

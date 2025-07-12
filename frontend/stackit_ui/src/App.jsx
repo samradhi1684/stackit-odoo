@@ -2,8 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
-import AskQuestion from "./pages/AskQuestion"; // friend a component
-import QuestionDetail from "./pages/QuestionDetail"; //friend b component
+import AskQuestion from "./pages/AskQuestion";
+import QuestionDetail from "./pages/QuestionDetail";
 
 function App() {
   return (
